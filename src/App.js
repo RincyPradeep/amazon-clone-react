@@ -1,24 +1,29 @@
-import logo from './logo.svg';
+import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
+
+import { AuthProvider } from './context/AuthContext';
+
 import './App.css';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Home from './components/Home/Home';
+import Navbar from './components/Navbar/Navbar';
+import SignUp from './components/SignUp/SignUp';
+import Login from './components/Login/Login';
+import Profile from './components/Profile/Profile';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+        <AuthProvider>
+          <Routes>
+            <Route exact path="/" element={<><Navbar/><Home/></>}></Route>
+            <Route path="/signup" element={<SignUp />}></Route>
+            <Route path="/login" element={<Login /> }></Route>
+            <Route path="/profile" element={<><Navbar/><Profile/></> }></Route>
+          </Routes>      
+        </AuthProvider>
+    </Router>
   );
 }
 

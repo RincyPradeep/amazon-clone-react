@@ -1,0 +1,67 @@
+#account-menu{
+    width: 460px;
+    height: 350px;
+    background-color: #fff;
+    position: absolute;
+    top: 58px;
+    right: 77px;
+    z-index: 20;
+    border-radius: 5px;
+    border: 1px solid #eee;
+    padding:20px;
+    text-align: center;
+}
+#account-menu div.top{
+
+}
+#account-menu div.top .btn{
+    width: 50%;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: #f8b44f;
+    border: 1px solid rgb(189, 188, 188) !important;
+    color: #000 !important;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    color: #fff;
+    cursor: pointer;
+    margin:10px 0;
+}
+#account-menu div.top h6{
+    display: block;
+    color:#000;
+    font-size: 13px;
+}
+#account-menu div.top h6 a{
+    display: inline;
+    color:#0066c0;
+}
+#account-menu div.bottom{
+    display: flex;
+    justify-content: space-between;
+    width:100%;
+    border-top: 1px solid #e7e7e7;
+}
+#account-menu div.bottom div.bottom-left{
+    width:50%;
+    text-align: left;
+}
+#account-menu div.bottom div.bottom-right{
+    width:40%;
+    text-align: left;
+    border-left: 1px solid #e7e7e7;
+    padding:10px;
+}
+#account-menu div.bottom h6{
+    font-weight: 600;
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+#account-menu div.bottom ul{
+    margin-left: 10px;
+}
+#account-menu div.bottom ul li a:hover{
+    color:#f8b44f;
+    text-decoration: underline;
+}
